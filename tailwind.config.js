@@ -1,0 +1,18 @@
+import { colors } from "./app/styles/colors";
+import { fontFamily } from "./app/styles/fontFamily";
+
+const { join } = require("path");
+
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  // NOTE: Update this to include the paths to all of your component files.
+  content: ["./app/**/*.{js,jsx,ts,tsx}"],
+  presets: [require("nativewind/preset")],
+  theme: {
+    extend: {
+      colors,
+      fontFamily,
+    },
+  },
+  plugins: [],
+};
